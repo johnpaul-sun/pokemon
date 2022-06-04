@@ -1,0 +1,84 @@
+.login-body {
+  background-image: url('../../Assets/Images/login-desktop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.from-card {
+  background-color: #212b5c;
+  border: 3px solid #6285ff;
+  padding: 20px;
+  border-radius: 6px;
+  color: #f9f3ee;
+  width: 400px;
+}
+
+.login-header {
+  color: #d8e3fe;
+  font-size: 50px;
+  margin-top: -50px;
+}
+
+.from-card form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 3px;
+}
+
+input[type='email']:focus,
+input[type='password']:focus {
+  outline: #001343;
+  color: #243a73;
+  background-color: #f9f3ee;
+  border-radius: 3px;
+}
+
+.login-body label {
+  margin-bottom: 3px;
+}
+
+.login-body button[name='button'] {
+  background-color: #8bb6ff;
+  padding: 9px 21px;
+  border-radius: 6px;
+  border: none;
+  transition: 0.3s ease-in-out;
+  color: #f9f3ee;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 312px;
+  margin-top: 10px;
+}
+
+.login-body button[name='button']:hover {
+  background-color: #6285ff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 500px) {
+  .from-card {
+    width: 250px;
+  }
+
+  .login-body button[name='button'] {
+    margin-left: 160px;
+  }
+}

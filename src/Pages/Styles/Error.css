@@ -1,0 +1,45 @@
+.error-body {
+  background-image: url('../../Assets/Images/404.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #6285ff;
+  line-height: 0px;
+}
+
+.error-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.error-body h1 {
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.error-body h3 {
+  font-size: 25px;
+}
+
+img[alt='snorlax'] {
+  width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  img[alt='snorlax'] {
+    width: 300px;
+  }
+  .error-body h1 {
+    font-size: 30px;
+  }
+  .error-body h3 {
+    font-size: 15px;
+  }
+}

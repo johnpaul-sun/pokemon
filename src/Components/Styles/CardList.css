@@ -1,0 +1,47 @@
+.card-list {
+  background-color: #1c254d;
+  display: flex;
+  align-items: center;
+  padding: 12px 50px 12px 18px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.card-list span {
+  font-size: 21px;
+  margin-left: 30px;
+}
+
+.card-list:hover {
+  border: 1px solid white;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 11px 49px 11px 17px;
+}
+
+.active {
+  background-color: #6285ff;
+}
+
+/* span[name='pokemon-name'] {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 60px;
+} */
+
+.card-list img[alt='pokeball-img'] {
+  width: 40px;
+  border-radius: 100%;
+  border: 3px solid #6285ff;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-list span {
+    font-size: 18px;
+    margin-left: 18px;
+    border-radius: 50%;
+  }
+}
