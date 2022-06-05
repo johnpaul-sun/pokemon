@@ -24,19 +24,22 @@
 
 .left-content {
   background-color: #324b93;
+  width: 450px;
 }
 
 .lc-list {
   padding: 69px 40px;
+  height: 400px;
   overflow: hidden;
 }
 
 .lc-paginate {
   background-color: #2c3c79;
-  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px 20px;
+  margin: 0px;
 }
 
 .rc-header {
@@ -123,15 +126,16 @@ td {
     width: 200px;
     height: 200px;
   }
-}
-
-@media only screen and (max-width: 600px) {
   .pokedex-container {
     width: 90%;
   }
-  .right-content {
+  .right-content,
+  .left-content {
     width: 100%;
   }
+}
+
+@media only screen and (max-width: 600px) {
   .pokedex-img {
     margin-top: 800px;
   }

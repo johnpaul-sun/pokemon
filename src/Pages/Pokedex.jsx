@@ -3,15 +3,18 @@ import './Styles/Pokedex.css';
 import PokemonImage from '../Assets/Images/pokemon.png';
 import LogoutButton from '../Assets/Images/back-button.png';
 import CardList from '../Components/CardList';
-import PokeBall from '../Assets/Images/pokeball.png';
+import Pagination from '../Components/Pagination';
+// import PokeBall from '../Assets/Images/pokeball.png';
 
 function Pokedex() {
   const [active, setActive] = useState('');
   const [pokemons, setPokemons] = useState([]);
   const [spotlight, setSpotlight] = useState({});
+  const [listPokemons, setListPokemons] = useState([]);
+
   const query = `
   {
-    pokemons(first: 5) { 
+    pokemons(first: 151) { 
       number
       name
       image
@@ -41,6 +44,7 @@ function Pokedex() {
           resJSON.data.pokemons[0].weight;
         let { minimum: minHeight, maximum: maxHeight } =
           resJSON.data.pokemons[0].height;
+
         setPokemons(resJSON.data.pokemons);
         setSpotlight({
           id: resJSON.data.pokemons[0].number,
@@ -66,7 +70,7 @@ function Pokedex() {
         <div className="pokedex-container">
           <div className="left-content">
             <div className="lc-list">
-              {pokemons.map((pokemon) => (
+              {listPokemons.map((pokemon) => (
                 <CardList
                   id={pokemon.number}
                   name={pokemon.name}
@@ -83,7 +87,12 @@ function Pokedex() {
                 />
               ))}
             </div>
-            <div className="lc-paginate">paginate</div>
+            <div className="lc-paginate">
+              <Pagination
+                pokemons={pokemons}
+                setListPokemons={setListPokemons}
+              />
+            </div>
           </div>
 
           <div className="right-content">
